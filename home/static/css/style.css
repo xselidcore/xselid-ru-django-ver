@@ -29,6 +29,7 @@ body {
 }
 
 .xselid-studio-logo {
+    margin-top: 50px;
     transition: 1s;
     max-width: 320px;
 }
@@ -84,4 +85,12 @@ body {
         transition: 1s;
         max-width: 200px;
     }
+    
+    .main h3 {
+    font-size: 13px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    color: #aaa;
+}
+    
 }
