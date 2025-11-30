@@ -47,14 +47,6 @@
         <nav>
             <div class="nav">
                 <a href="{% url 'home' %}" class="nav-logo">Xselid Studio</a>
-                
-                <div class="nav-toggle" id="navToggle">
-                    <div class="nav-toggle-inner">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                </div>
 
                 <div class="nav-links" id="navLinks">
                     <a href="{% url 'home' %}" class="{% if request.resolver_match.url_name == 'home' %}active{% endif %}">Главная</a>
