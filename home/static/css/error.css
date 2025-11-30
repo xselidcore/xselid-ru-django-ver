@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+html {
+    background-color: #0e0e0e;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0 20px 60px 20px;
+    font-family: "Nunito", sans-serif;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    text-align: center;
+}
+
+.error-container {
+    max-width: 600px;
+}
+
+.error-code {
+    font-size: 120px;
+    font-weight: 900;
+    color: #ff4f6e;
+    margin: 0;
+}
+
+.error-message {
+    font-size: 28px;
+    font-weight: 600;
+    color: #aaa;
+    margin: 10px 0 20px 0;
+}
+
+.error-description {
+    font-size: 16px;
+    color: #ccc;
+    margin-bottom: 30px;
+}
+
+a.back-home {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #1b1b1b;
+    color: #87ffe1;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+a.back-home:hover {
+    transform: translateY(-3px);
+    background-color: #333;
+}
+
+
+@keyframes blink {
+    0%, 50%, 100% { opacity: 1; }
+    25%, 75% { opacity: 0; }
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1b1b1b;
+    color: #fff;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 0;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.3);
+}
+
+footer a {
+    color: #8a8a8a;
+    text-decoration: none;
+    transition: color 0.3s, transform 0.3s;
+}
+
+footer a:hover {
+    color: #87ffe1;
+    transform: translateY(-2px);
+}

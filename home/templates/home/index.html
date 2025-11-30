@@ -1,0 +1,25 @@
+{% extends "home/base.html" %}
+{% load static %}
+
+{% block title %}Главная{% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer-style.css' %}">
+{% endblock %}
+
+
+{% block content %}
+<main>
+    <div class="main">
+        <img src="{% static 'images/logo.png' %}" alt="logo-xselid-studio" class="xselid-studio-logo">
+        <h1>Xselid Studio</h1>
+        <h3><span id="typing"></span><span class="cursor">|</span></h3>
+        <ul id="work-list">
+            <li data-aos="zoom-in" data-aos-delay="400">Логикой сайта</li>
+            <li data-aos="zoom-in" data-aos-delay="500">Дизайном главной страницы</li>
+            <li data-aos="zoom-in" data-aos-delay="600">Структурой проекта..<span class="cursor-2">|</span></li>
+        </ul>
+    </div>
+</main>
+{% endblock %}

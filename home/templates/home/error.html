@@ -1,0 +1,21 @@
+{% extends "home/base.html" %}
+{% load static %}
+
+{% block title %}Ошибка {{ code }}{% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/error.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer-style.css' %}">
+{% endblock %}
+
+{% block content %}
+    <main>
+        <div class="error-container">
+            <h1 class="error-code">{{ code }}</h1>
+            <h3 class="error-message">{{ message }}</h3>
+            <p class="error-description">{{ description }}</p>
+            <a href="{% url 'home' %}" class="back-home">Вернуться на главную</a>
+        </div>
+    </main>
+{% endblock %}

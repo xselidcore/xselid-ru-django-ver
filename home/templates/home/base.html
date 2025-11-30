@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %} - Xselid Studio</title>
+    <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="yandex-verification" content="0fcdc504c208e19a" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- SEO -->
+    <meta name="description" content="Xselid Studio">
+    <meta name="keywords" content="Xselid Studio, веб-разработка, дизайн, Xselid, Xselid Core">
+    <meta name="author" content="Xselid Studio">
+    <meta name="robots" content="index, follow">
+    
+    <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    {% block extra_css %}
+        <link rel="stylesheet" href="{% static 'css/footer-style.css' %}">
+    {% endblock %}
+</head>
+<body>
+
+    {% block content %}{% endblock %}
+
+    {% block footer %}
+        <footer>
+            <p id="footer-clock"></p>
+            <a href="https://t.me/xselidcore">Подписаться на Telegram</a>
+        </footer>
+
+        <script src="{% static 'js/time.js' %}"></script>
+
+        <!-- AOS JS -->
+        <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+        <script>
+            AOS.init({
+                duration: 1000, 
+                once: true     
+            });
+        </script>
+    {% endblock %}
+
+</body>
+</html>

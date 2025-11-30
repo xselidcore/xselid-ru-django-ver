@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+html { 
+    background: radial-gradient(ellipse at center, rgb(12, 12, 12) 0%, #000000 100%);
+    background-attachment: fixed;
+    position: relative;
+    background-color: #000000;
+}
+
+html::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        repeating-linear-gradient(0deg, transparent, transparent 60px, rgba(255, 255, 255, 0.010) 60px, rgba(255, 255, 255, 0.010) 61px),
+        repeating-linear-gradient(90deg, transparent, transparent 60px, rgba(255, 255, 255, 0.010) 60px, rgba(255, 255, 255, 0.010) 61px);
+    pointer-events: none;
+    z-index: -1;
+}
+
+body {
+    overflow-x: hidden;
+    margin: 0;
+    padding-bottom: 40px;
+    font-family: "Nunito", sans-serif;
+}
+
+.xselid-studio-logo {
+    transition: 1s;
+    max-width: 320px;
+}
+
+
+.cursor-2 {
+    display: inline-block;
+    width: 10px;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 50%, 100% { opacity: 1; }
+    25%, 75% { opacity: 0; }
+}
+
+
+.main {
+    max-width: 600px;
+    margin: 60px auto 100px auto;
+    padding: 0 20px;
+    font-family: monospace;
+    color: #fff;
+    text-align: center;
+}
+
+.main h1 {
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.main h3 {
+    font-weight: 400;
+    margin-bottom: 20px;
+    color: #aaa;
+}
+
+.main ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.main ul li {
+    padding: 4px 0;
+    font-weight: 400;
+    color: #fff;
+}
+
+
+@media (max-width: 768px) {
+    .xselid-studio-logo {
+        transition: 1s;
+        max-width: 200px;
+    }
+}
