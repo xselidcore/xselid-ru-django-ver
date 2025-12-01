@@ -12,9 +12,11 @@ ENV = os.getenv("ENV", "dev")
 if ENV == "prod":
     ALLOWED_HOSTS = ["xselid.ru", "www.xselid.ru"]
     DEBUG = False
+    CSRF_TRUSTED_ORIGINS = ["https://xselid.ru", "https://www.xselid.ru"]
 else:
     ALLOWED_HOSTS = ["*"]
     DEBUG = True
+    CSRF_TRUSTED_ORIGINS = ["http://localhost:8000", "http://127.0.0.1:8000"]
 
 SECRET_KEY = os.getenv("SECRET_KEY")
 
