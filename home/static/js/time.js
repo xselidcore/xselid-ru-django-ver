@@ -7,7 +7,7 @@ function updateFooterClock() {
     const minutes = String(now.getMinutes()).padStart(2, '0');
     const seconds = String(now.getSeconds()).padStart(2, '0');
 
-    const formatted = `${day}:${month}:${year} ${hours}:${minutes}:${seconds}`;
+    const formatted = `${day}.${month}.${year} - ${hours}:${minutes}:${seconds}`;
     document.getElementById("footer-clock").textContent = formatted;
 }
 
