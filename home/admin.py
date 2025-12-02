@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Visit
+from .models import Visit, RoadmapItem
 
 
 admin.site.site_header = "Xselid Studio - Администрирование"
@@ -22,11 +22,20 @@ class VisitAdmin(admin.ModelAdmin):
         "created_at",
     )
     ordering = ("-created_at",)
-    list_per_page = 50 
-    date_hierarchy = "created_at" 
+    list_per_page = 50
+    date_hierarchy = "created_at"
 
     def short_user_agent(self, obj):
         ua = obj.user_agent or ""
         return ua[:80] + ("..." if len(ua) > 80 else "")
 
     short_user_agent.short_description = "User-Agent"
+
+
+@admin.register(RoadmapItem)
+class RoadmapItemAdmin(admin.ModelAdmin):
+    list_display = ("text", "section", "position", "is_active")
+    list_filter = ("section", "is_active")
+    list_editable = ("position", "is_active")
+    search_fields = ("text",)
+    ordering = ("section", "position", "id")

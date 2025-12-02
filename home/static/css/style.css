@@ -79,6 +79,37 @@ body {
     color: #fff;
 }
 
+.map-tag {
+    display: inline-block;
+    margin-right: 8px;
+    padding: 2px 8px;
+    border-radius: 999px;
+    background: #111111b9;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #87ffe1;
+}
+
+.map-link {
+    margin-top: 16px;
+}
+
+.map-more-btn {
+    display: inline-block;
+    font-family: monospace;
+    font-size: 13px;
+    color: #87ffe1;
+    text-decoration: none;
+    border-bottom: 1px dashed #87ffe1;
+    transition: 0.2s ease;
+}
+
+.map-more-btn:hover {
+    transform: translateY(-1px);
+    color: #b3fff0;
+}
+
 
 @media (max-width: 768px) {
     .xselid-studio-logo {

@@ -15,11 +15,19 @@
         <h1>Xselid Studio</h1>
         <h3><span id="typing"></span><span class="cursor">|</span></h3>
         <ul id="work-list">
-            <li data-aos="zoom-out" data-aos-delay="100">Новым стилем</li>
-            <li data-aos="zoom-out" data-aos-delay="200">Дизайном главной страницы</li>
-            <li data-aos="zoom-out" data-aos-delay="300">Структуре сайта</li>
-            <li data-aos="zoom-out" data-aos-delay="400">Современными функциями..<span class="cursor-2">|</span></li>
+            {% for item in roadmap_preview %}
+            <li data-aos="zoom-out" data-aos-delay="{{ forloop.counter0|add:1 }}00">
+                <span class="map-tag">{{ item.section }}</span>
+                {{ item.text }}
+            </li>
+            {% endfor %}
         </ul>
+
+        {% if roadmap_has_more %}
+        <div class="map-link" data-aos="zoom-out" data-aos-delay="500">
+            <a href="{% url 'map' %}" class="map-more-btn">Показать всю карту →</a>
+        </div>
+        {% endif %}
     </div>
 </main>
 {% endblock %}

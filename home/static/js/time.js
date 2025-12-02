@@ -19,7 +19,7 @@ setInterval(updateFooterClock, 1000);
 
 
 
-const text = "Мы активно разрабатываем сайт и думаем над:";
+const text = "Мы активно разрабатываем сайт:";
 let index = 0;
 const typingElem = document.getElementById("typing");
 const cursor = document.querySelector(".cursor");
