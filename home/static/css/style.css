@@ -22,6 +22,7 @@ html::before {
 }
 
 body {
+    padding-top: 50px;
     overflow-x: hidden;
     margin: 0;
     padding-bottom: 40px;
@@ -29,9 +30,8 @@ body {
 }
 
 .xselid-studio-logo {
-    margin-top: 50px;
     transition: 1s;
-    max-width: 320px;
+    max-width: 300px;
 }
 
 
@@ -96,12 +96,15 @@ body {
 }
 
 .map-more-btn {
+    padding: 10px 10px;
+    border-radius: 10px;
+    background-color: #1f1f1f4b;
     display: inline-block;
     font-family: monospace;
     font-size: 13px;
     color: #87ffe1;
     text-decoration: none;
-    border-bottom: 1px dashed #87ffe1;
+    border: 1px dashed #87ffe1;
     transition: 0.2s ease;
 }
 
@@ -112,6 +115,9 @@ body {
 
 
 @media (max-width: 768px) {
+    .map-tag {
+        font-size: 10px;
+    }
     .xselid-studio-logo {
         transition: 1s;
         max-width: 200px;
@@ -123,5 +129,9 @@ body {
     margin-bottom: 20px;
     color: #aaa;
 }
+
+    .map-text {
+        font-size: 11px;
+    }
     
 }

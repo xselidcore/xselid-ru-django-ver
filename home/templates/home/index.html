@@ -18,7 +18,7 @@
             {% for item in roadmap_preview %}
             <li data-aos="zoom-out" data-aos-delay="{{ forloop.counter0|add:1 }}00">
                 <span class="map-tag">{{ item.section }}</span>
-                {{ item.text }}
+                <span class="map-text">{{ item.text }}</span>
             </li>
             {% endfor %}
         </ul>
