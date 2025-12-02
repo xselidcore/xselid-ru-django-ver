@@ -113,6 +113,9 @@ body {
     color: #b3fff0;
 }
 
+.tg-link {
+    margin-top: 5px;
+}
 
 @media (max-width: 768px) {
     .map-tag {
@@ -133,5 +136,8 @@ body {
     .map-text {
         font-size: 11px;
     }
-    
+
+    .tg-link {
+        margin-top: 15px;
+    }
 }
